@@ -1,0 +1,16 @@
+{
+  "name": "react2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:sendah/react2.git",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  }
+}
