@@ -5,7 +5,6 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
-// import App from './components/App';
 import App from './components/App';
 import reducer from './reducers/';
 

@@ -9,18 +9,8 @@ import HotelsTable from './HotelsTable';
 import { startSearch } from '../actions/';
 
 class SearchPage extends Component {
-
   componentDidMount() {
     this.props.dispatch(startSearch());
-  }
-
-  getPlaceParam() {
-    const params = queryString.parse(this.props.location.search);
-    const place = params.place;
-    if (place && place.length > 0) {
-      return place;
-    }
-    return null;
   }
 
   render() {
@@ -35,6 +25,7 @@ class SearchPage extends Component {
               address={this.props.geocodeResult.address}
               location={this.props.geocodeResult.location}
             />
+            <h2>ホテル検索結果</h2>
             <HotelsTable />
           </div>
         </div>

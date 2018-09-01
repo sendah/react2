@@ -29,15 +29,10 @@ const SearchForm = props => (
 
 SearchForm.propTypes = {
   place: PropTypes.string.isRequired,
-  onPlaceChange: PropTypes.func.isRequired,
-  setPlace: PropTypes.funnc.isRequired,
-  startSearch: PropTypes.funnc.isRequired,
+  setPlace: PropTypes.func.isRequired,
+  startSearch: PropTypes.func.isRequired,
   history: PropTypes.shape({ push: PropTypes.func }).isRequired,
 };
-
-const mapStateToProps = state => ({
-  place: state.place,
-});
 
 export default connect(
   state => ({
