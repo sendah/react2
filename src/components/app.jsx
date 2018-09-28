@@ -1,31 +1,27 @@
-import React, { Component } from 'react';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Switch,
+} from 'react-router-dom';
 
-import Greeting from './greeting';
+import SearchPage from './SearchPage';
+import AboutPage from './AboutPage';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: 'Bobda',
-    };
-  }
-
-  handleNameChange(name) {
-    this.setState({ name });
-  }
-
-  render() {
-    return (
-      <div>
-      <input
-        type="text"
-        value={this.state.name}
-        onChange={e => this.handleNameChange(e.target.value)}
-      >
-        <Greeting name={this.state.name} />
-      </div>
-    );
-  }
-}
+const App = () => (
+  <Router>
+    <div className="app">
+      <ul className="left-navi">
+        <li><Link to="/">ホテル検索</Link></li>
+        <li><Link to="/about">About</Link></li>
+      </ul>
+      <Switch>
+        <Route exact path="/" component={SearchPage} />
+        <Route exact path="/about" component={AboutPage} />
+      </Switch>
+    </div>
+  </Router>
+);
 
 export default App;
